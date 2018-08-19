@@ -1,0 +1,45 @@
+{
+    "manifest_version": 2,
+    "name": "GameOfGit",
+    "version": "1.0",
+
+    "description": "A Chrome extension implementation of Conway's Game of Life, using GitHub's contribution activity graph.",
+    "icons": {
+        "16": "images/active/logo16.png",
+        "32": "images/active/logo32.png",
+        "48": "images/active/logo48.png",
+        "128": "images/active/logo128.png"
+    },
+
+    "page_action": {
+        "default_icon": {
+            "16": "images/nascent/logo16.png",
+            "32": "images/nascent/GitHub-Mark-Light-32px.png",
+            "48": "images/nascent/logo48.png",
+            "128": "images/nascent/logo128.png"
+        },
+        "default_title": "GameOfGit"
+    },
+
+    "background": {
+        "scripts": [
+            "icons.js",
+            "background.js"
+        ],
+        "persistent": false
+    },
+
+    "content_scripts": [{
+        "matches": [
+            "*://github.com/*"
+        ],
+        "js": [
+            "game.js",
+            "main.js"
+        ]
+    }],
+
+    "permissions": [
+        "tabs"
+    ]
+}
