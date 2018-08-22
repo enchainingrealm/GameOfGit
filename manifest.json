@@ -26,7 +26,7 @@
             "icons.js",
             "background.js"
         ],
-        "persistent": false
+        "persistent": true
     },
 
     "content_scripts": [{
@@ -34,6 +34,8 @@
             "*://github.com/*"
         ],
         "js": [
+            "gameState.js",
+            "util.js",
             "game.js",
             "main.js"
         ]

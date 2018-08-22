@@ -7,12 +7,12 @@ function handleMessage(request, sender, sendResponse) {
         return;
 
     case "initializeGame":
-        //initializeGame();
+        initializeGame();
         sendResponse({});
         return;
 
     case "runGame":
-        //runGame();
+        runGame();
         sendResponse({});
         return;
 
