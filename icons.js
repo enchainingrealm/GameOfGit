@@ -1,3 +1,9 @@
+/**
+ * Sets the icon of the Page Action button on the tab with the given ID to the
+ * "waiting" icon, then calls the callback.
+ * @param tabId   the ID of the tab to set the Page Action button icon on
+ * @param callback   a nullary function called after the icon is set
+ */
 function setWaitingIcons(tabId, callback) {
     chrome.pageAction.setIcon({
         tabId: tabId,
@@ -10,6 +16,12 @@ function setWaitingIcons(tabId, callback) {
     }, callback);
 }
 
+/**
+ * Sets the icon of the Page Action button on the tab with the given ID to the
+ * "active" icon, then calls the callback.
+ * @param tabId   the ID of the tab to set the Page Action button icon on
+ * @param callback   a nullary function called after the icon is set
+ */
 function setActiveIcons(tabId, callback) {
     chrome.pageAction.setIcon({
         tabId: tabId,

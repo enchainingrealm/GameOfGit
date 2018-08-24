@@ -1,3 +1,5 @@
+// GameState constructor.
+// A GameState object contains the states of all living cells in the game.
 function GameState() {
     let obj = {};
 
@@ -10,6 +12,12 @@ function GameState() {
     //   - 2 means MEDIUM
     //   - 3 means DARK
 
+    /**
+     * Returns the state of the cell in the ith row and jth column.
+     * @param i   the cell's row
+     * @param j   the cell's column
+     * @returns {!number}   the state of the cell
+     */
     obj.get = function(i, j) {
         let key = encode(i, j);
         if (obj.datum.hasOwnProperty(key)) {
@@ -19,6 +27,13 @@ function GameState() {
         }
     };
 
+    /**
+     * Sets the state of the cell in the ith row and jth column to the given
+     * state.
+     * @param state   the state to set the cell to
+     * @param i   the cell's row
+     * @param j   the cell's column
+     */
     obj.set = function(state, i, j) {
         let key = encode(i, j);
         if (state === 0) {
@@ -31,10 +46,21 @@ function GameState() {
     return obj;
 }
 
+/**
+ * Converts row and column numbers to string keys used in GameState.
+ * @param i   the row number
+ * @param j   the column number
+ * @returns {!string}   the string key
+ */
 function encode(i, j) {
     return `(${i}, ${j})`;
 }
 
+/**
+ * Converts string keys used in GameState to row and column numbers.
+ * @param key   the string key
+ * @returns {![number]}   the row and column numbers
+ */
 function decode(key) {
     let parts = key.split(", ");
 

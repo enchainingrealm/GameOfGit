@@ -1,11 +1,14 @@
+// Dimensions of the game grid.
 const NUM_ROWS = 52;
 const NUM_COLUMNS = 52;
 
+// Colours of cells in the game grid.
 const NONE = "#ebedf0";
 const LIGHT = "#c6e48b";
 const MEDIUM = "#7bc96f";
 const DARK = "#196127";
 
+// Path to SVG namespace.
 const PATH = "http://www.w3.org/2000/svg";
 
 // =============================================================================
