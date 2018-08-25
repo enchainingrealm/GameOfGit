@@ -1,3 +1,5 @@
+const MAX_STATE = 3;
+
 // GameState constructor.
 // A GameState object contains the states of all living cells in the game.
 function GameState() {
@@ -68,4 +70,22 @@ function decode(key) {
     let j = Number(parts[1].slice(0, -1));
 
     return [i, j];
+}
+
+/**
+ * If the given state is 0 (dead cell), return 0.
+ * Otherwise, return the corresponding state in the next iteration, assuming the
+ * respective cell stays alive:
+ * - If the given state is already maximum, return it.
+ * - Otherwise, add 1 to the state and return it.
+ * @param state   the current state of a cell
+ * @returns {!number}   the next state of the cell, assuming the cell lives on
+ *                      to the next generation
+ */
+function next(state) {
+    if (state === 0 || state === MAX_STATE) {
+        return state;
+    } else {
+        return state + 1;
+    }
 }
