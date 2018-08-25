@@ -8,7 +8,8 @@ const NUM_COLUMNS = 52;
 // Colours of cells in the game grid.
 const NONE = "#ebedf0";
 const LIGHT = "#c6e48b";
-const MEDIUM = "#7bc96f";
+const MEDIUM_LIGHT = "#7bc96f";
+const MEDIUM_DARK = "#239a3b";
 const DARK = "#196127";
 
 // Path to namespace for "rect" elements.
@@ -283,9 +284,12 @@ function repaintCell(i, j) {
         cellElement.style.fill = LIGHT;
         break;
     case 2:
-        cellElement.style.fill = MEDIUM;
+        cellElement.style.fill = MEDIUM_LIGHT;
         break;
     case 3:
+        cellElement.style.fill = MEDIUM_DARK;
+        break;
+    case 4:
         cellElement.style.fill = DARK;
         break;
     default:

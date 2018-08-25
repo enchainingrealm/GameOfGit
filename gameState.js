@@ -1,4 +1,4 @@
-const MAX_STATE = 3;
+const MAX_STATE = 4;
 
 // GameState constructor.
 // A GameState object contains the states of all living cells in the game.
@@ -11,8 +11,9 @@ function GameState() {
     // - state is number
     //   - 0 means NONE
     //   - 1 means LIGHT
-    //   - 2 means MEDIUM
-    //   - 3 means DARK
+    //   - 2 means MEDIUM_LIGHT
+    //   - 3 means MEDIUM_DARK
+    //   - 4 means DARK
 
     /**
      * Returns the state of the cell in the ith row and jth column.
