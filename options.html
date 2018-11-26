@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GameOfGit - Options</title>
+</head>
+<body>
+
+<hr>
+<div class="main--div">
+
+    <!-- Form -->
+    <form>
+        <div class="form-group">
+            <label for="tick-rate--input">
+                Tick rate
+            </label>
+            <input class="form-control" id="tick-rate--input"
+                   placeholder="Tick rate">
+        </div>
+        <table>
+            <tr>
+                <td class="left--td">
+                    <button type="button" class="btn btn-primary"
+                            id="save--button">
+                        Save
+                    </button>
+                </td>
+                <td class="right--td" id="success--td">
+                    <div class="alert alert-success" id="success--alert">
+                        Success!
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+
+<!-- Imports -->
+<link rel="stylesheet" href="lib/normalize.css">
+<link rel="stylesheet" href="lib/bootstrap.min.css">
+<link rel="stylesheet" href="options.css">
+<script src="lib/jquery-3.3.1.slim.min.js"></script>
+<script src="lib/popper.min.js"></script>
+<script src="lib/bootstrap.in.js"></script>
+<script src="options.js"></script>
+
+</body>
+</html>

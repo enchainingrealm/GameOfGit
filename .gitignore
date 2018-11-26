@@ -1,3 +1,9 @@
+/lib/bootstrap.min.css
+/lib/bootstrap.min.js
+/lib/jquery-3.3.1.slim.min.js
+/lib/normalize.css
+/lib/popper.min.js
+
 # ===================
 # JetBrains.gitignore
 

@@ -144,16 +144,23 @@ function initializeCells() {
  * Starts running the game.
  * - Disables the ability to toggle cells by clicking on them, by removing the
  *   click listeners.
- * - Schedules the next generation (game state) to be computed and drawn every
- *   0.1 seconds.
+ * - Schedules the next generation (game state) to be computed and drawn
+ *   periodically at the rate specified in the game options (10 per second by
+ *   default.)
  */
 function runGame() {
     removeClickListeners();
 
-    setInterval(function() {
-        tick();
-        repaint();
-    }, 100);
+    chrome.storage.sync.get({
+        tickRate: 10
+    }, function(items) {
+        let tickRate = items.tickRate;
+
+        setInterval(function() {
+            tick();
+            repaint();
+        }, 1000 / tickRate);
+    });
 }
 
 /**

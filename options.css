@@ -1,0 +1,27 @@
+hr {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.left--td {
+    padding-right: 8px;
+}
+
+.main--div {
+    padding: 16px;
+}
+
+.right--td {
+    padding-left: 8px;
+}
+
+#success--alert {
+    display: none;
+    margin: 0;
+    padding: .375rem .75rem;
+    text-align: center;
+}
+
+#success--td {
+    width: 100%;
+}

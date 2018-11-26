@@ -27,6 +27,10 @@ function handleUpdated(tabId, changeInfo, tab) {
         chrome.tabs.sendMessage(tabId, {
             "type": "showPageAction"
         }, function(response) {
+            if (!response) {
+                return;   // icon clicked on Chrome extension management tab
+            }
+
             if (response["response"]) {
                 tabStates[tab.id] = 0;
                 chrome.pageAction.show(tabId);

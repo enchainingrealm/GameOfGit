@@ -1,2 +1,0 @@
-WebStorm -> Preferences -> Languages & Frameworks -> JavaScript -> Libraries
-- Check "@types/chrome"
