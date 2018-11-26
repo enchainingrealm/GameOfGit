@@ -10,13 +10,15 @@
 <div class="main--div">
 
     <!-- Form -->
-    <form>
-        <div class="form-group">
+    <form novalidate>
+        <div class="form-group was-validated" id="tick-rate--form-group">
             <label for="tick-rate--input">
-                Tick rate
+                Tick rate (generations per second)
             </label>
-            <input class="form-control" id="tick-rate--input"
-                   placeholder="Tick rate">
+            <input class="form-control" id="tick-rate--input">
+            <div class="invalid-feedback">
+                Enter a positive integer.
+            </div>
         </div>
         <table>
             <tr>
@@ -43,7 +45,7 @@
 <link rel="stylesheet" href="options.css">
 <script src="lib/jquery-3.3.1.slim.min.js"></script>
 <script src="lib/popper.min.js"></script>
-<script src="lib/bootstrap.in.js"></script>
+<script src="lib/bootstrap.min.js"></script>
 <script src="options.js"></script>
 
 </body>
