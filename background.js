@@ -27,8 +27,19 @@ function handleUpdated(tabId, changeInfo, tab) {
         chrome.tabs.sendMessage(tabId, {
             "type": "showPageAction"
         }, function(response) {
-            if (!response) {
-                return;   // icon clicked on Chrome extension management tab
+            if (chrome.runtime.lastError) {
+                let message = "Could not establish connection. Receiving end " +
+                    "does not exist.";
+
+                if (chrome.runtime.lastError.message === message) {
+                    return;   // Chrome extension management page for GameOfGit
+                    // was visited
+                } else {
+                    throw chrome.runtime.lastError.message;
+                    // propagate the error. Throw the message, not the error, so
+                    // the message, instead of "[object Object]", appears in the
+                    // errors list on the Chrome extension management page.
+                }
             }
 
             if (response["response"]) {
